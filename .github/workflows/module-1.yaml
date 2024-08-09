@@ -25,8 +25,8 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build and push
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          context: "{{defaultContext}}:module-1"
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/fast-api:latest
+      uses: docker/build-push-action@v2
+      with:
+        push: true
+        context: "{{defaultContext}}:module-1"
+        tags: ${{ vars.DOCKERHUB_USERNAME }}/fast-api:latest
